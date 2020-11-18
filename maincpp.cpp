@@ -16,6 +16,7 @@ void rek()
 template<typename T, typename... T2>
 void rek(T a, T2 ...  b)
 {
+	std::cout << a;
 	rek(b...);
 }
 
