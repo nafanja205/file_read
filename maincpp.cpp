@@ -8,6 +8,18 @@
 
 std::string split(std::string&, char);
 
+void rek()
+{
+
+}
+
+template<typename T, typename... T2>
+void rek(T a, T2 ...  b)
+{
+	rek(b...);
+}
+
+
 int main()
 {
 	
@@ -32,7 +44,9 @@ int main()
 	
 	std::sort(mas_file.begin(), mas_file.end());
 
+	rek(1, 2, 4, 6);
 	
+
 	return 0;
 }
 
@@ -40,3 +54,5 @@ std::string split(std::string& str, char spl)
 {
 	return str.substr(0, str.find(spl));
 }
+
+
